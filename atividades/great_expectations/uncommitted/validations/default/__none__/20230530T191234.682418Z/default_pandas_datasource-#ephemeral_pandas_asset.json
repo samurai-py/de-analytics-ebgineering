@@ -1,0 +1,433 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "#ephemeral_pandas_asset",
+      "data_connector_name": "fluent",
+      "datasource_name": "default_pandas_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230530T190545.833549Z",
+      "pandas_data_fingerprint": "05709dad807d24c620541df64cce309d"
+    },
+    "batch_spec": {
+      "reader_method": "read_csv",
+      "reader_options": {
+        "filepath_or_buffer": "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
+      }
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "my_validator",
+    "expectation_suite_name": "default",
+    "great_expectations_version": "0.16.14",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-05-30T16:12:34.682418-03:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230530T191234.687407Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column_list": [
+            "survived",
+            "sex",
+            "age",
+            "n_siblings_spouses",
+            "parch",
+            "fare",
+            "class",
+            "deck",
+            "embark_town",
+            "alone"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "survived",
+          "sex",
+          "age",
+          "n_siblings_spouses",
+          "parch",
+          "fare",
+          "class",
+          "deck",
+          "embark_town",
+          "alone"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "survived",
+          "value_set": [
+            0,
+            1
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "survived"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "class",
+          "value_set": [
+            "First",
+            "Second",
+            "Third"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "class"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "age"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "age",
+          "max_value": 100,
+          "min_value": 0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "fare"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "fare",
+          "max_value": 100,
+          "min_value": 0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": 135.6333
+          },
+          {
+            "count": 2,
+            "value": 146.5208
+          },
+          {
+            "count": 2,
+            "value": 153.4625
+          },
+          {
+            "count": 2,
+            "value": 247.5208
+          },
+          {
+            "count": 2,
+            "value": 263.0
+          },
+          {
+            "count": 1,
+            "value": 108.9
+          },
+          {
+            "count": 1,
+            "value": 110.8833
+          },
+          {
+            "count": 1,
+            "value": 113.275
+          },
+          {
+            "count": 1,
+            "value": 133.65
+          },
+          {
+            "count": 1,
+            "value": 134.5
+          },
+          {
+            "count": 1,
+            "value": 164.8667
+          },
+          {
+            "count": 1,
+            "value": 211.5
+          },
+          {
+            "count": 1,
+            "value": 227.525
+          },
+          {
+            "count": 1,
+            "value": 262.375
+          },
+          {
+            "count": 1,
+            "value": 512.3292
+          }
+        ],
+        "partial_unexpected_index_list": [
+          20,
+          24,
+          69,
+          93,
+          143,
+          158,
+          187,
+          196,
+          197,
+          215,
+          220,
+          221,
+          225,
+          230,
+          231,
+          236,
+          240,
+          241,
+          272,
+          274
+        ],
+        "partial_unexpected_list": [
+          263.0,
+          146.5208,
+          263.0,
+          247.5208,
+          146.5208,
+          113.275,
+          512.3292,
+          153.4625,
+          135.6333,
+          247.5208,
+          110.8833,
+          108.9,
+          262.375,
+          164.8667,
+          134.5,
+          135.6333,
+          153.4625,
+          133.65,
+          211.5,
+          227.525
+        ],
+        "unexpected_count": 43,
+        "unexpected_percent": 6.8580542264752795,
+        "unexpected_percent_nonmissing": 6.8580542264752795,
+        "unexpected_percent_total": 6.8580542264752795
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "default_pandas_datasource-#ephemeral_pandas_asset",
+          "column": "sex",
+          "value_set": [
+            "male",
+            "female"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 627,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 10,
+    "success_percent": 90.0,
+    "successful_expectations": 9,
+    "unsuccessful_expectations": 1
+  },
+  "success": false
+}
